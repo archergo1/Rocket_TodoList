@@ -9,9 +9,13 @@ let data = [];
 function renderData(){
   let str = '';
   data.forEach(function (item,index) {
-    str+=`<li>${item.content} <input class="delete" type="button" data-num="${index}" value="delete"></li>`
+    str+=`<li>
+    <input class="todo__check" type="checkbox">
+    ${item.content} 
+    <input class="delete" type="button" data-num="${index}" value="delete">
+    </li>`
   })
-//   
+//   checkbox功能參考自https://hackmd.io/@Heidi-Liu/note-js102-todolist
 //   利用str這個空字串來組出完整資料
   list.innerHTML = str;
 //   將組好的li植入class=list這個ul中 
